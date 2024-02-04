@@ -1,6 +1,6 @@
 # GitHub mirror
 
-Basic bash script to keep a copy of all your GitHub repos.
+Bash script to keep a copy of all your GitHub repos.
 
 ## Functionality
 
@@ -19,3 +19,13 @@ To run the script while keeping logs, I recommend the following:
 # run gitmirror, pipe stdout and stderr to log file
 ./gitmirror.sh >> "logs/$(date +'%Y%m%d').log" 2>&1
 ```
+
+I have this running on my NAS as a weekly recurring task.
+
+## Dependencies
+Before running the script, make sure you have the following dependencies installed:
+
+- `curl`
+- `jq`
+- `git`
+
