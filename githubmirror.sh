@@ -22,8 +22,7 @@ if [ $exit_code != 0 ]; then
     exit $exit_code
 fi
 
-log "Removing temporary files"
-unlink urls.txt
+log "Removing temporary repo list file."
 unlink repos.txt
 
 log "Retrieving gh repo api pages"
@@ -54,11 +53,8 @@ for i in $(seq 1 $num_pages); do
         -H "X-GitHub-Api-Version: 2022-11-28" \
         "$apiurl"
     )
-    echo $resp | jq -r '.[] | "\(.html_url)"' >> urls.txt
+    echo $resp | jq -r '.[] | "\(.full_name)"' >> repos.txt
 done
-
-log "Extracting repo names from urls"
-grep -Po "(?<=github.com/).*" urls.txt > repos.txt
 
 # function to update a repo that already exists on the drive
 function update_repo() {
