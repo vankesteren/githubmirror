@@ -2,7 +2,7 @@
 
 ![GitHub License](https://img.shields.io/github/license/vankesteren/githubmirror) ![GitHub file size in bytes](https://img.shields.io/github/size/vankesteren/githubmirror/githubmirror.sh)
 
-A small, legible bash script to keep a copy of all your GitHub repos. The `githubmirror.sh` script does the following:
+🪶 A lightweight, legible bash script to keep a copy of all your GitHub repos. The `githubmirror.sh` script does the following:
 
 - 🔏 Read your [Personal Access Token](https://github.com/settings/tokens?type=beta) from a local file.
 - 🔗 Connect to the GitHub API to find all the repos of which you are an owner (even private ones!).
