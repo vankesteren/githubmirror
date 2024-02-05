@@ -1,4 +1,5 @@
-#! /bin/bash
+#!/usr/bin/env bash
+
 # Create a simple log function
 function log() {
     echo "$(date +"%Y-%m-%d %H:%M:%S") | $1"
